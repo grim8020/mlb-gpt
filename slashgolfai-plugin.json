@@ -1,0 +1,59 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "Slash Golf API",
+  "name_for_human": "Slash Golf API",
+  "description_for_model": "Fetch golf data such as player stats, tournament schedules, and leaderboard information from the Slash Golf API.",
+  "description_for_human": "Get PGA Tour player stats, tournament schedules, and leaderboard details.",
+  "auth": {
+    "type": "apiKey",
+    "apiKey": {
+      "name": "x-rapidapi-key",
+      "in": "header"
+    }
+  },
+  "api": {
+    "url": "https://live-golf-data.p.rapidapi.com",
+    "paths": {
+      "/organizations": {
+        "get": {
+          "summary": "Fetch organizations available in the API",
+          "response": "application/json"
+        }
+      },
+      "/schedule": {
+        "get": {
+          "summary": "Fetch the PGA Tour schedule",
+          "parameters": {
+            "year": { "type": "string", "required": true },
+            "orgId": { "type": "string", "required": false }
+          },
+          "response": "application/json"
+        }
+      },
+      "/players": {
+        "get": {
+          "summary": "Fetch a PGA Tour player by parameters",
+          "parameters": {
+            "lastName": { "type": "string", "required": false },
+            "firstName": { "type": "string", "required": false },
+            "playerId": { "type": "string", "required": false }
+          },
+          "response": "application/json"
+        }
+      },
+      "/leaderboard": {
+        "get": {
+          "summary": "Fetch the leaderboard for a given tournament",
+          "parameters": {
+            "tournId": { "type": "string", "required": true },
+            "year": { "type": "string", "required": true },
+            "roundId": { "type": "string", "required": false }
+          },
+          "response": "application/json"
+        }
+      }
+    }
+  },
+  "logo_url": "https://path_to_your_logo",
+  "contact_email": "slashgolfapi@gmail.com"
+}

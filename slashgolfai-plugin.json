@@ -7,7 +7,7 @@
   "auth": {
     "type": "apiKey",
     "apiKey": {
-      "name": "477153f177msh45d287e1e906e5cp1fe2e8jsnfca143e39045",
+      "name": "x-rapidapi-key",
       "in": "header"
     }
   },
@@ -24,8 +24,14 @@
         "get": {
           "summary": "Fetch the PGA Tour schedule",
           "parameters": {
-            "year": { "type": "string", "required": true },
-            "orgId": { "type": "string", "required": false }
+            "year": {
+              "type": "string",
+              "required": true
+            },
+            "orgId": {
+              "type": "string",
+              "required": false
+            }
           },
           "response": "application/json"
         }
@@ -34,9 +40,18 @@
         "get": {
           "summary": "Fetch a PGA Tour player by parameters",
           "parameters": {
-            "lastName": { "type": "string", "required": false },
-            "firstName": { "type": "string", "required": false },
-            "playerId": { "type": "string", "required": false }
+            "lastName": {
+              "type": "string",
+              "required": false
+            },
+            "firstName": {
+              "type": "string",
+              "required": false
+            },
+            "playerId": {
+              "type": "string",
+              "required": false
+            }
           },
           "response": "application/json"
         }
@@ -45,9 +60,18 @@
         "get": {
           "summary": "Fetch the leaderboard for a given tournament",
           "parameters": {
-            "tournId": { "type": "string", "required": true },
-            "year": { "type": "string", "required": true },
-            "roundId": { "type": "string", "required": false }
+            "tournId": {
+              "type": "string",
+              "required": true
+            },
+            "year": {
+              "type": "string",
+              "required": true
+            },
+            "roundId": {
+              "type": "string",
+              "required": false
+            }
           },
           "response": "application/json"
         }

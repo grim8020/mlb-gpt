@@ -1,28 +1,18 @@
-openapi: 3.0.1
-info:
-  title: MLB Schedule API
-  description: Get MLB games by date.
-  version: "1.0.0"
-servers:
-  - url: https://statsapi.mlb.com/api/v1
-paths:
-  /schedule/games:
-    get:
-      summary: Get MLB games for a date
-      parameters:
-        - in: query
-          name: sportId
-          schema:
-            type: integer
-          required: true
-          example: 1
-        - in: query
-          name: date
-          schema:
-            type: string
-            format: date
-          required: true
-          example: "2025-07-04"
-      responses:
-        '200':
-          description: A list of games
+{
+  "schema_version": "v1",
+  "name_for_human": "MLB Schedule",
+  "name_for_model": "mlb_schedule",
+  "description_for_human": "Get MLB games for a specific date.",
+  "description_for_model": "Returns MLB games scheduled on a date.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://grim8020.github.io/mlb-gpt/openapi.yaml"
+  },
+  "logo_url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Major_League_Baseball_logo.svg",
+  "contact_email": "grim8020@gmail.com",
+  "legal_info_url": "https://www.mlb.com/official-information"
+}
+

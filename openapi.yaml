@@ -1,0 +1,83 @@
+
+
+openapi: 3.1.0
+info:
+  title: MLB Schedule API
+  version: 1.0.0
+  description: Get MLB games for a given date
+
+servers:
+  - url: https://statsapi.mlb.com
+
+paths:
+  /api/v1/schedule/games:
+    get:
+      operationId: getMLBGames
+      summary: Retrieve MLB games on a specific date
+      parameters:
+        - name: sportId
+          in: query
+          required: true
+          schema:
+            type: integers
+            example: 1
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+            example: 2025-07-04
+      responses:
+        '200':
+          description: A list of MLB games
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dates:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        date:
+                          type: string
+                        games:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              gamePk:
+                                type: integer
+                              gameDate:
+                                type: string
+                              status:
+                                type: object
+                                properties:
+                                  detailedState:
+                                    type: string
+                              teams:
+                                type: object
+                                properties:
+                                  home:
+                                    type: object
+                                    properties:
+                                      team:
+                                        type: object
+                                        properties:
+                                          name:
+                                            type: string
+                                  away:
+                                    type: object
+                                    properties:
+                                      team:
+                                        type: object
+                                        properties:
+                                          name:
+                                            type: string
+                              venue:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string

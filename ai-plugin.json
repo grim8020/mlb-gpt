@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "MLB Schedule",
+  "name_for_model": "mlb_schedule",
+  "description_for_human": "Get MLB games for a specific date.",
+  "description_for_model": "Returns MLB games scheduled on a date.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://grim8020.github.io/mlb-gpt/openapi.yaml"
+  },
+  "logo_url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Major_League_Baseball_logo.svg",
+  "contact_email": "grim8020@gmail.com",
+  "legal_info_url": "https://www.mlb.com/official-information"
+}

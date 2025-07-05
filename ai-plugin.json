@@ -7,9 +7,11 @@
   "auth": {
     "type": "none"
   },
-  "api": {
-    "type": "openapi",
-    "url": "https://grim8020.github.io/mlb-gpt/openapi.yaml"
+"api": {
+  "type": "openapi",
+  "url": "https://grim8020.github.io/mlb-gpt/openapi.yaml"
+}
+
   },
   "logo_url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Major_League_Baseball_logo.svg",
   "contact_email": "your@email.com",
